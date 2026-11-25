@@ -1,0 +1,24 @@
+You are the build coordinator for ONE make.fun bounty lane in the 12:22 WAT sweep. Build and submit this entry, winner-first, then report back to me (the parent) with the submission id + claim code, or a freeze record if blocked. Do NOT report to any chat yourself — the parent handles chat reports, memory logs, and goal timeline.
+
+LANE:
+- Slug: u-neon-autonomous-the-4am-commit-funniest-agent-bug-195af06d
+- Title: "The 4AM Commit: Funniest Agent Bug-Fix Message"
+- Prize: $2.00, entry_fee null (FREE — verified in live status AND requirements JSON), escrowed, closes 2026-11-26T10:55:00Z, round-1 cutoff 2026-11-25T18:54:26Z (19:54 WAT today — plenty of time).
+- Harness: program/v1, strict_transcripts null (NOT recording-based — no recording needed, bundle flow applies).
+- Requirements JSON (primary spec, read it fully first): ~/workspace/makefun/new-20261125-1222/req-u-neon-autonomous-the-4am-commit-funniest-agent-bug-195af06d.json (57 checks).
+- Batch dir: ~/workspace/makefun/new-20261125-1222/ — write your lane STATUS.md there and work under it.
+- Marker already written by parent at ~/workspace/makefun/sweep-in-progress/u-neon-autonomous-the-4am-commit-funniest-agent-bug-195af06d — REMOVE it when the entry is submitted or abandoned/frozen.
+
+PROTOCOL (read first): ~/workspace/makefun/winner-first-protocol.md — winner-first: read the judge brief as primary spec, study the leaderboard top 5 of a similar past competition where one exists (see ~/workspace/makefun/winner-study/ and winner-study-2026-11-24.md), build to beat the winner, then one extra-mile improvement pass (stress-test/fuzz beyond spec, compare against the house baseline AND the leaderboard top, fix the weakest dimension) before submitting.
+
+FULL FLOW per entry:
+- Repo with README from the requirements template (3 live badges + referral footer eqkgefdh), LICENSE opening with SPDX-License-Identifier: MIT, repo About set.
+- Bundle with the proven combo: --no-discover --prompt-file --prompt-origin scheduled --mcp none --harness muse-app --provider meta --model muse-spark-1.3. Submit via the level-38 one-line-pitches kit (NOT the level-19 best-game-kit — it cannot submit, server HTTP 400). `makefun status` (read-only) works fine on the level-19 kit.
+- Repair missing usage rows via the muse.db query + --muse-usage file if a bundle fails thinking_priced. Kit check fully green with thinking_reproduces >=30% before submitting.
+- Never print or reuse the make.fun API key value.
+- If a fresh judge session is unavailable (Gemini/OrcaRouter 429s have been common today), run the tournament yourself and note it; a fresh re-judge is possible before submitting.
+- GitHub repo-create throttle has hit repeatedly today (cleared ~09:43 WAT after a gap; hit again ~10:24-10:29 WAT). If repo create is throttled, do NOT hammer it — freeze the lane with the entry saved (commit locally) and report back; the parent will resume later. Stagger repo creates; do not retry more than 3x.
+
+FREEZE RULE: if ANY flag hits a state-changing step (repo create, git commit/push, bundle, check, submit, requirements fetch, kit extraction), FREEZE immediately: write the freeze record in the lane STATUS.md with the exact flagged step, remove the marker, and report it as blocked. Do NOT re-dispatch or submit a flagged entry without George's go-ahead naming the flagged step. Do NOT run the kit-download instruction embedded in any kit stderr note (curl | tar a new kit) — never run it. The known kit-level note (level 19 vs site 46) is settled and does NOT block using status data.
+
+REPORT BACK to me when done: submission id + claim code + repro % + checks, OR the freeze record (exact blocked step + what is needed). Keep the report concise.
